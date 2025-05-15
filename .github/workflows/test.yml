@@ -1,0 +1,15 @@
+name: Manual Run
+
+on:
+  workflow_dispatch:
+    inputs:
+        branch:
+          description: 'Branch to deploy'
+          required: true
+          default: 'test-branch'
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Manually triggered!"
